@@ -1,0 +1,18 @@
+:root{
+    --color-principal-:#5C4B51;
+    --color-secundario-:#8CBEB2;
+    --color-indice-:#F2EBBF;
+}
+
+body{
+    background-color: var(--color-secundario-);
+    color: black;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
