@@ -1,23 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/estilosGenerales.css">
-
+    <link rel="stylesheet" href="css/estilosGenerales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/catalogo.css">
 </head>
 <body>
     <header>
-        <div>
-            <img src="" alt="">
+        <div style="margin-left: 80px;">
+            <img src="" alt="Logo">
         </div>
         <ul>
-            <li><a href="/login.html">Sign in</a></li>
-            <li><a href="/registro.html">Sign up</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="registro.html">Sign up</a></li>
         </ul>
     </header>
-    <h1><a href="/login.html">Login</a></h1>
+
+    <main>
+        <section class="hero-section">
+            <h1>Catálogo de Productos</h1>
+            <p>Descubre nuestra increíble selección de productos a excelentes precios</p>
+        </section>
+
+        <section class="filter-section">
+            <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('electronics')">Electrónicos</button>
+            <button class="filter-btn" onclick="filterProducts('computers')">Computadoras</button>
+            <button class="filter-btn" onclick="filterProducts('phones')">Teléfonos</button>
+            <button class="filter-btn" onclick="filterProducts('accessories')">Accesorios</button>
+        </section>
+
+        <section class="products-grid" id="productsGrid">
+        
+            <div class="product-card" data-category="electronics">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Smartphone Pro Max</h3>
+                <p class="product-description">El último modelo con cámara de 108MP, pantalla AMOLED y procesador de última generación.</p>
+                <div class="product-price">$1000</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="computers">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Laptop Gaming RGB</h3>
+                <p class="product-description">Potente laptop para gaming con tarjeta gráfica dedicada, 16GB RAM y SSD de 1TB. Muy poco uso.</p>
+                <div class="product-price">$1200</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Auriculares Inalámbricos</h3>
+                <p class="product-description">Auriculares con cancelación de ruido, batería de 30 horas y calidad de sonido premium. Nuevos.</p>
+                <div class="product-price">$1300</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Smart Watch Elite</h3>
+                <p class="product-description">Reloj inteligente con monitor de salud, GPS integrado y resistencia al agua. Muy poco uso.</p>
+                <div class="product-price">$1400</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="computers">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Monitor 4K Ultra Wide</h3>
+                <p class="product-description">Monitor curvo de 34 pulgadas, resolución 4K, ideal para trabajo y entretenimiento.</p>
+                <div class="product-price">$1500</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Teclado Mecánico RGB</h3>
+                <p class="product-description">Teclado gaming mecánico con switches azules, retroiluminación RGB personalizable.</p>
+                <div class="product-price">$1600</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="phones">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Teléfono Clásico Retro</h3>
+                <p class="product-description">Teléfono con diseño vintage pero con funciones modernas, perfecto para oficina.</p>
+                <div class="product-price">$1700</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Cámara Digital Pro</h3>
+                <p class="product-description">Cámara profesional con sensor de 45MP, grabación 4K y lentes intercambiables.</p>
+                <div class="product-price">$1800</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-icon" onclick="toggleCart()">
+    </div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <div class="logo">
+            <img src="" alt="logo">
+            </div>
+            <p>Tu tienda de confianza</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>📞 +54 11 1234-5678</p>
+            <p>✉️ info@gmail.com</p>
+            <p>📍 Buenos Aires, Argentina</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 3tres. Todos los derechos reservados.</p>
+    </div>
+</footer>
+<script>
+    function filterProducts(category) {
+    const products = document.querySelectorAll('.product-card');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+            product.style.animation = 'fadeInUp 0.6s ease forwards';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+</script>
 </body>
 </html>
