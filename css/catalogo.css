@@ -209,11 +209,6 @@ main {
     z-index: 1000;
 }
 
-.cart-icon:hover {
-    transform: scale(1.1);
-    background: var(--input-focus);
-}
-
 .cart-icon::before {
     content: "🛒";
     font-size: 1.5rem;
@@ -233,29 +228,6 @@ main {
     color: white;
     font-size: 0.8rem;
     font-weight: bold;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.product-card {
-     animation: fadeInUp 0.6s ease forwards;
-}
-
-.product-card:nth-child(even) {
-    animation-delay: 0.1s;
-}
-
-.product-card:nth-child(3n) {
-    animation-delay: 0.2s;
 }
 
 .site-footer {
