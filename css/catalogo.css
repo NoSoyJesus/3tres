@@ -40,7 +40,7 @@ header ul li a {
     color: var(--color-indice-);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 10px;
+    border-radius: 4px;
     transition: all 0.3s ease;
 }
 
@@ -107,7 +107,7 @@ main {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 0.5rem;
 }
 
@@ -115,7 +115,8 @@ main {
     margin-bottom: 3rem;
     background: var(--background);
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     position: relative;
@@ -130,13 +131,8 @@ main {
     right: 0;
     height: 4px;
     background: var(--font-color);
-}
+} 
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border-color: var(--color-secundario-);
-}
 
 .product-image {
     width: 100%;
@@ -188,8 +184,24 @@ main {
 }
 
 .btn-primary:hover {
-    background: var(--font-color-sub);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .cart-icon {
