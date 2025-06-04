@@ -29,11 +29,11 @@
         </section>
 
         <section class="filter-section">
-            <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
-            <button class="filter-btn" onclick="filterProducts('electronics')">Electrónicos</button>
-            <button class="filter-btn" onclick="filterProducts('computers')">Computadoras</button>
-            <button class="filter-btn" onclick="filterProducts('phones')">Teléfonos</button>
-            <button class="filter-btn" onclick="filterProducts('accessories')">Accesorios</button>
+            <button class="filter-btn active" onclick="filterProducts('all', event)">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('electronics', event)">Electrónicos</button>
+            <button class="filter-btn" onclick="filterProducts('computers', event)">Computadoras</button>
+            <button class="filter-btn" onclick="filterProducts('phones', event)">Teléfonos</button>
+            <button class="filter-btn" onclick="filterProducts('accessories', event)">Accesorios</button>
         </section>
 
         <section class="products-grid" id="productsGrid">
@@ -120,8 +120,11 @@
         </section>
     </main>
 
-    <div class="cart-icon">
-    </div>
+    <a href="/carrito.html">
+        <div class="cart-icon">
+        
+        </div>
+    </a>
 
 <footer class="site-footer">
     <div class="footer-container">
@@ -159,23 +162,6 @@
         <p>&copy; 2025 3tres. Todos los derechos reservados.</p>
     </div>
 </footer>
-<script>
-    function filterProducts(category) {
-    const products = document.querySelectorAll('.product-card');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    
-    filterBtns.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    products.forEach(product => {
-        if (category === 'all' || product.dataset.category === category) {
-            product.style.display = 'block';
-            product.style.animation = 'fadeInUp 0.6s ease forwards';
-        } else {
-            product.style.display = 'none';
-        }
-    });
-}
-</script>
+<script src="/js/filtroProductos.js"></script>
 </body>
 </html>
