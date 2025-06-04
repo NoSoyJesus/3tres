@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilosGenerales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <header>
+        <div style="margin-left: 80px;">
+            <img src="" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="registro.html">Sign up</a></li>
+        </ul>
+    </header>
+
+    <div class="formulario">
+        <form action="">
+            <input type="text">
+            <input type="text">
+            <input type="number">
+            <input type="file">
+        </form>
+    </div>
+
+    <main style="display: none;">
+        <section class="hero-section">
+            <button class="btn-primary" style="font-size: 3rem;">Agregar Productos</button>
+        </section>
+
+        <section class="filter-section">
+            <button class="filter-btn active" onclick="filterProducts('all', event)">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('electronics', event)">Electrónicos</button>
+            <button class="filter-btn" onclick="filterProducts('computers', event)">Computadoras</button>
+            <button class="filter-btn" onclick="filterProducts('phones', event)">Teléfonos</button>
+            <button class="filter-btn" onclick="filterProducts('accessories', event)">Accesorios</button>
+        </section>
+
+        <section class="products-grid" id="productsGrid">
+        
+            <div class="product-card" data-category="electronics">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Smartphone Pro Max</h3>
+                <p class="product-description">El último modelo con cámara de 108MP, pantalla AMOLED y procesador de última generación.</p>
+                <div class="product-price">$1000</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button>
+            </div>
+
+            <div class="product-card" data-category="computers">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Laptop Gaming RGB</h3>
+                <p class="product-description">Potente laptop para gaming con tarjeta gráfica dedicada, 16GB RAM y SSD de 1TB. Muy poco uso.</p>
+                <div class="product-price">$1200</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Auriculares Inalámbricos</h3>
+                <p class="product-description">Auriculares con cancelación de ruido, batería de 30 horas y calidad de sonido premium. Nuevos.</p>
+                <div class="product-price">$1300</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Smart Watch Elite</h3>
+                <p class="product-description">Reloj inteligente con monitor de salud, GPS integrado y resistencia al agua. Muy poco uso.</p>
+                <div class="product-price">$1400</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="computers">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Monitor 4K Ultra Wide</h3>
+                <p class="product-description">Monitor curvo de 34 pulgadas, resolución 4K, ideal para trabajo y entretenimiento.</p>
+                <div class="product-price">$1500</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Teclado Mecánico RGB</h3>
+                <p class="product-description">Teclado gaming mecánico con switches azules, retroiluminación RGB personalizable.</p>
+                <div class="product-price">$1600</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="phones">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Teléfono Clásico Retro</h3>
+                <p class="product-description">Teléfono con diseño vintage pero con funciones modernas, perfecto para oficina.</p>
+                <div class="product-price">$1700</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="electronics">
+                <img src="" alt="" class="product-image">
+                <h3 class="product-title">Cámara Digital Pro</h3>
+                <p class="product-description">Cámara profesional con sensor de 45MP, grabación 4K y lentes intercambiables.</p>
+                <div class="product-price">$1800</div>
+                <div class="product-actions">
+                    <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="/carrito.html">
+        <div class="cart-icon">
+        
+        </div>
+    </a>
+
+<footer class="site-footer">
+</footer>
+<script src="/js/filtroProductos.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+:root{
+    --background: #d3d3d3;
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+}
+
+body{
+    overscroll-behavior: none;
+}
+.formulario{
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ .formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+ .formulario input{
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fafbfc;
+ }
+
+ .formulario input:focus{
+    outline: none;
+    border-color: var(--input-focus);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    transform: translateY(-2px);
+ }
+
+ .formulario input[type="text"]{
+    color: #333;
+ }
+
+ .formulario input[type="number"]{
+    color:#333
+ }
+
+ .formulario input[type="file"]{
+    padding: 12px;
+    border: 2px dashed #c7d2fe;
+    background-color: #f8faff;
+    cursor: pointer;
+    color: #6366f1;
+    font-weight: 500;
+ }
+
+ .formulario input[type="file"]:hover{
+    border-color: #4f46e5;
+    background-color: #f1f5f9;
+ }
+
+ .formulario input[type="file"]:focus{
+    border-color: #9ca3af;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+ }
+
+ .formulario input::placeholder{
+    color: #9ca3af;
+    font-style: italic;
+
+ }
+
+ .formulario input:hover{
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+ }
+
+ .formulario{
+    animation: fadeInUp 0.6s ease-out;
+ }
+
+ @keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(30);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
