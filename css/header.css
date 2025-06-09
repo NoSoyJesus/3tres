@@ -23,14 +23,17 @@ header ul {
 
 header ul li a {
     color: var(--color-indice-);
-    text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 header ul li a:hover {
-    background: var(--background);
-    color: var(--font-color);
+    background: rgba(245, 245, 245, 0.144);
+    color: white;
     transform: translateY(-2px);
+}
+
+header div a img{
+    width: 45%;
 }
