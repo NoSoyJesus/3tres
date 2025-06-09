@@ -13,6 +13,7 @@ body {
     overscroll-behavior: none;
 }
 
+<<<<<<< HEAD
 header {
     background: var(--font-color);
     padding: 1rem 2rem;
@@ -50,6 +51,8 @@ header ul li a:hover {
     transform: translateY(-2px);
 }
 
+=======
+>>>>>>> main
 main {
     max-width: 1480px;
     margin: 0 auto;
@@ -174,6 +177,7 @@ main {
 .btn-primary {
     flex: 1;
     padding: 0.8rem;
+    margin-top: 10px;
     background: var(--font-color);
     color: var(--bg-color);
     border: none;
@@ -242,81 +246,3 @@ main {
     font-weight: bold;
 }
 
-.site-footer {
-    background: var(--font-color);
-    color: white;
-    margin-top: 3rem;
-}
-
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-.logo img{
-  height: 40px;
-  margin-bottom: 1rem;
-}
-
-.footer-section h4 {
-    color: var(--bg-color);
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-section p {
-    line-height: 1.5;
-    margin-bottom: 0.8rem;
-    opacity: 0.9;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: var(--color-secundario-);
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 20px;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #444;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 20%;
-}
-.social-icon:hover {
-  transform: translateY(-3px);
-}
-
-.footer-bottom {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 1rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/catalogo.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 <body>
     <header>
@@ -22,10 +23,18 @@
         </ul>
     </header>
 
-    <main>
+    <div class="formulario">
+        <form action="">
+            <input type="text">
+            <input type="text">
+            <input type="number">
+            <input type="file">
+        </form>
+    </div>
+
+    <main style="display: none;">
         <section class="hero-section">
-            <h1>Catálogo de Productos</h1>
-            <p>Descubre nuestra increíble selección de productos a excelentes precios</p>
+            <button class="btn-primary" style="font-size: 3rem;">Agregar Productos</button>
         </section>
 
         <section class="filter-section">
@@ -46,6 +55,8 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button>
             </div>
 
             <div class="product-card" data-category="computers">
@@ -55,6 +66,9 @@
                 <div class="product-price">$1200</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
                 </div>
             </div>
 
@@ -66,6 +80,9 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
             </div>
 
             <div class="product-card" data-category="electronics">
@@ -75,6 +92,9 @@
                 <div class="product-price">$1400</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
                 </div>
             </div>
 
@@ -86,6 +106,9 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
             </div>
 
             <div class="product-card" data-category="accessories">
@@ -95,6 +118,9 @@
                 <div class="product-price">$1600</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
                 </div>
             </div>
 
@@ -106,6 +132,9 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
+                </div>
             </div>
 
             <div class="product-card" data-category="electronics">
@@ -115,6 +144,9 @@
                 <div class="product-price">$1800</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button></button>
                 </div>
             </div>
         </section>
@@ -127,40 +159,6 @@
     </a>
 
 <footer class="site-footer">
-    <div class="footer-container">
-
-        <div class="footer-section">
-            <div class="logo">
-            <img src="" alt="logo">
-            </div>
-            <p>Tu tienda de confianza</p>
-                <div class="social-icons">
-                    <a href=" " class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href=" " class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href=" " class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-        </div>
-
-        <div class="footer-section">
-            <h4>Enlaces</h4>
-            <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#nosotros">Sobre Nosotros</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Contacto</h4>
-            <p>📞 +54 11 1234-5678</p>
-            <p>✉️ info@gmail.com</p>
-            <p>📍 Buenos Aires, Argentina</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2025 3tres. Todos los derechos reservados.</p>
-    </div>
 </footer>
 <script src="/js/filtroProductos.js"></script>
 </body>

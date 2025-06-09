@@ -1,0 +1,36 @@
+header {
+    background: var(--font-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(92, 75, 81, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+header ul li a {
+    color: var(--color-indice-);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+    background: var(--background);
+    color: var(--font-color);
+    transform: translateY(-2px);
+}
