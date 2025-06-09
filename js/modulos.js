@@ -4,8 +4,8 @@ const header=`<div style="margin-left: 80px;">
         <ul>
             <li><a href="login.html">Sign in</a></li>
             <li><a href="registro.html">Sign up</a></li>
-        </ul>`
-const footer= `<div class="footer-container">
+        </ul>`;
+const footer = `<div class="footer-container">
         <div class="footer-section">
             <div class="logo">
             <img src="" alt="logo">
@@ -39,5 +39,5 @@ const footer= `<div class="footer-container">
         <p>&copy; 2025 3tres. Todos los derechos reservados.</p>
     </div>`
 
-document.querySelector('header').innerHTML=nav;
+document.querySelector('header').innerHTML=header;
 document.querySelector('footer').innerHTML=footer;
