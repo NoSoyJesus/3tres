@@ -15,32 +15,18 @@
     <header></header>
     <div id="carrito">
         <div id="articulosCarrito">
-            <div class="articulo">
+            <!-- <div class="articulo">
                 <img src="https://placehold.co/400x400.png" alt="">
                 <div>
                     <p class="tituloArticulo">Articulo 1</p>
                     <p class="precioArticulo">$15.000</p>
                 </div>
-            </div>
-            <div class="articulo">
-                <img src="https://placehold.co/400x400.png" alt="">
-                <div>
-                    <p class="tituloArticulo">Articulo 2</p>
-                    <p class="precioArticulo">$27.450</p>
-                </div>
-            </div>
-            <div class="articulo">
-                <img src="https://placehold.co/400x400.png" alt="">
-                <div>
-                    <p class="tituloArticulo">Articulo 3</p>
-                    <p class="precioArticulo">$5.750</p>
-                </div>
-            </div>
+            </div> -->
         </div>
 
         <div id="seccionCompra">
             <div id="totalDiv">
-                <p>Total estimado: <span>$48200</span></p>
+                <p>Total estimado: $<span id="totalCompra">0</span></p>
             </div>
 
             <a href="" id="pagarCarrito">Comprar</a>
@@ -48,6 +34,7 @@
     </div>
 
     <footer class="site-footer"></footer>
-    <script src="js/modulos.js"></script>
+    <script src="./js/modulos.js"></script>
+    <script src="./js/carrito.js" onload="cargarCarrito()"></script>
 </body>
 </html>

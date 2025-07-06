@@ -1,9 +1,13 @@
-const header=`<div style="margin-left: 80px;">
-            <img src="" alt="Logo">
-        </div>
+const header= `
+        <a href="./index.html">
+            <div style="margin-left: 80px;">
+                <img src="" alt="Logo">
+            </div>
+        </a>    
         <ul>
-            <li><a href="login.html">Sign in</a></li>
-            <li><a href="registro.html">Sign up</a></li>
+            <li><a href="./login.html">Sign in</a></li>
+            <li><a href="./registro.html">Sign up</a></li>
+            <li><a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>`;
 const footer = `<div class="footer-container">
         <div class="footer-section">
