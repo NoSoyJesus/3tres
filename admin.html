@@ -10,22 +10,28 @@
     <link rel="stylesheet" href="css/catalogo.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="./css/admin.css">
 </head>
 <body>
     <header>
-        <!-- <div id="botonDesplegable"></div>
-        <div id="menuDesplegable">
-            <a href="">Inicio</a>
-            <a href="">Administracion</a>
-            <a href="">Inicio de Sesion</a>
-            <a href="">Registro</a>
-        </div> -->
-        
     </header>
+
+    <div class="formulario" id="formularioAgreg">
+        <h1>Agregue Un Nuevo Producto</h1>
+        <form action="">
+
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Descripcion" required>
+            <input type="number" placeholder="Precio" required>
+            <input type="file" placeholder="Imagenes" required>
+            <button id="agregarProd" onclick="">Agregar</button>
+        </form>
+    </div>
+
     <main>
         <section class="hero-section">
-            <h1>Catálogo de Productos</h1>
-            <p>Descubre nuestra increíble selección de productos a excelentes precios</p>
+            <button class="btn-primary" style="font-size: 3rem;" onclick="mostrarF()">Agregar Productos</button>
         </section>
 
         <section class="filter-section">
@@ -46,6 +52,8 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary">Editar</button>
             </div>
 
             <div class="product-card" data-category="computers">
@@ -55,6 +63,9 @@
                 <div class="product-price">$1200</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
                 </div>
             </div>
 
@@ -66,6 +77,9 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
+                </div>
             </div>
 
             <div class="product-card" data-category="electronics">
@@ -75,6 +89,9 @@
                 <div class="product-price">$1400</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
                 </div>
             </div>
 
@@ -86,6 +103,9 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
+                </div>
             </div>
 
             <div class="product-card" data-category="accessories">
@@ -95,6 +115,9 @@
                 <div class="product-price">$1600</div>
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
+                </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
                 </div>
             </div>
 
@@ -106,6 +129,9 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
+                </div>
             </div>
 
             <div class="product-card" data-category="electronics">
@@ -116,9 +142,23 @@
                 <div class="product-actions">
                     <button class="btn-primary">Agregar al Carrito</button>
                 </div>
+                <button class="btn-primary">Eliminar</button>
+                <button class="btn-primary" onclick="showFE()">Editar</button></button>
+                </div>
             </div>
         </section>
     </main>
+
+    <div class="formulario" id="formularioEdit">
+        <h1>Edite el Producto</h1>
+        <form action="">
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Descripcion" required>
+            <input type="number" placeholder="Precio" required>
+            <input type="file" placeholder="Imagenes" required>
+            <button id="agregarProd" onclick="">Confirmar</button>
+        </form>
+    </div>
 
     <a href="./carrito.html">
         <div class="cart-icon">
@@ -128,7 +168,6 @@
 
 
 <footer class="site-footer"></footer>
-
 <script src="/js/filtroProductos.js"></script>
 <script src="js/modulos.js"></script>
 </body>

@@ -13,6 +13,46 @@ body {
     overscroll-behavior: none;
 }
 
+<<<<<<< HEAD
+header {
+    background: var(--font-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(92, 75, 81, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+header ul li a {
+    color: var(--color-indice-);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+    background: var(--background);
+    color: var(--font-color);
+    transform: translateY(-2px);
+}
+
+=======
+>>>>>>> main
 main {
     max-width: 1480px;
     margin: 0 auto;
@@ -70,7 +110,7 @@ main {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 0.5rem;
 }
 
@@ -78,7 +118,8 @@ main {
     margin-bottom: 3rem;
     background: var(--background);
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     position: relative;
@@ -93,13 +134,8 @@ main {
     right: 0;
     height: 4px;
     background: var(--font-color);
-}
+} 
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border-color: var(--color-secundario-);
-}
 
 .product-image {
     width: 100%;
@@ -141,6 +177,7 @@ main {
 .btn-primary {
     flex: 1;
     padding: 0.8rem;
+    margin-top: 10px;
     background: var(--font-color);
     color: var(--bg-color);
     border: none;
@@ -151,8 +188,24 @@ main {
 }
 
 .btn-primary:hover {
-    background: var(--font-color-sub);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .cart-icon {
