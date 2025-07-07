@@ -81,12 +81,12 @@ function cargarCarrito() {
         cantidad.type = "number"
         cantidad.min = 1
         cantidad.value = articulo.cantidad
-        cantidad.setAttribute("oninput", "modificarCantidad(event)")
+        cantidad.setAttribute("input", "modificarCantidad(event)")
         cantidad.setAttribute("onkeydown", "return false")
 
         const eliminarArticulo = document.createElement("button")
         eliminarArticulo.classList = "eliminarArticulo fa-solid fa-circle-xmark"
-        eliminarArticulo.setAttribute("input", "quitarCarrito(event)")
+        eliminarArticulo.setAttribute("onclick", "quitarCarrito(event)")
 
         articuloContenido.append(nombre, descripcion, precio, cantidad, eliminarArticulo)
         articuloContenedor.appendChild(articuloContenido)

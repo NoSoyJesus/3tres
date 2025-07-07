@@ -1,7 +1,7 @@
 const header= `
         <a href="./index.html">
             <div style="margin-left: 80px;">
-                <img src="" alt="Logo">
+                <img src="./img/a.png" alt="Logo" style="width: 10%;">
             </div>
         </a>    
         <ul>
