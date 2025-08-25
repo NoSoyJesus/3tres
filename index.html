@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/estilosGenerales.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -39,99 +40,190 @@
         <section class="products-grid" id="productsGrid">
         
             <div class="product-card" data-category="electronics">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/iPhone_16_Pro_Natural_Titanium_Hero_Vertical_Screen__WWEN_fe8bed66-68af-41a4-9cb8-8fdb1a6cb5c7.jpg" alt="" class="product-image">
                 <h3 class="product-title">Smartphone Pro Max</h3>
                 <p class="product-description">El último modelo con cámara de 108MP, pantalla AMOLED y procesador de última generación.</p>
                 <div class="product-price">$1000</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-1" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-1" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="computers">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/ge63-raider-20180110-1.png" alt="" class="product-image">
                 <h3 class="product-title">Laptop Gaming RGB</h3>
                 <p class="product-description">Potente laptop para gaming con tarjeta gráfica dedicada, 16GB RAM y SSD de 1TB. Muy poco uso.</p>
                 <div class="product-price">$1200</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-2" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-2" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="accessories">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/01.JBL_Tune 520BT_Product Image_Hero_Blue.png" alt="" class="product-image">
                 <h3 class="product-title">Auriculares Inalámbricos</h3>
                 <p class="product-description">Auriculares con cancelación de ruido, batería de 30 horas y calidad de sonido premium. Nuevos.</p>
                 <div class="product-price">$1300</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-3" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-3" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="electronics">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/1.5_6bde6e09-101c-4bfb-a188-465b35ee5f4f_1.jpg" alt="" class="product-image">
                 <h3 class="product-title">Smart Watch Elite</h3>
                 <p class="product-description">Reloj inteligente con monitor de salud, GPS integrado y resistencia al agua. Muy poco uso.</p>
                 <div class="product-price">$1400</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-4" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-4" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="computers">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/descargar.png" alt="" class="product-image">
                 <h3 class="product-title">Monitor 4K Ultra Wide</h3>
                 <p class="product-description">Monitor curvo de 34 pulgadas, resolución 4K, ideal para trabajo y entretenimiento.</p>
                 <div class="product-price">$1500</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-5" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-5" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="accessories">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/smk5900sb-2.png" alt="" class="product-image">
                 <h3 class="product-title">Teclado Mecánico RGB</h3>
                 <p class="product-description">Teclado gaming mecánico con switches azules, retroiluminación RGB personalizable.</p>
                 <div class="product-price">$1600</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-6" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-6" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="phones">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/Colorware-iPhone-7-Retro-2.png" alt="" class="product-image">
                 <h3 class="product-title">Teléfono Clásico Retro</h3>
                 <p class="product-description">Teléfono con diseño vintage pero con funciones modernas, perfecto para oficina.</p>
                 <div class="product-price">$1700</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-7" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-7" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
 
             <div class="product-card" data-category="electronics">
+                <div class="heart-icon" onclick="toggleFavorite(this)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img src="./img/04-1-clp-featured-H13-1920-1280-png.png" alt="" class="product-image">
                 <h3 class="product-title">Cámara Digital Pro</h3>
                 <p class="product-description">Cámara profesional con sensor de 45MP, grabación 4K y lentes intercambiables.</p>
                 <div class="product-price">$1800</div>
                 <div class="product-actions">
-                    <button class="btn-primary">Agregar al Carrito</button>
+                    <div class="quantity-controls">
+                        <label for="quantity-8" class="quantity-label">Cant:</label>
+                        <input type="number" id="quantity-8" class="quantity-input" value="1" min="1" max="99">
+                    </div>
+                    <button class="btn-primary" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
                 </div>
             </div>
         </section>
     </main>
 
-    <a href="./carrito.html">
+    <a href="./favoritos.html">
         <div class="cart-icon">
-        
+        <i class="fa-solid fa-heart-circle-check" style="color: rgb(210, 209, 209);"></i>
         </div>
     </a>
-
 
 <footer class="site-footer"></footer>
 
 <script src="./js/filtroProductos.js"></script>
 <script src="./js/modulos.js"></script>
 <script src="./js/carrito.js"></script>
+
+<script>
+function toggleFavorite(heartElement) {
+    const icon = heartElement.querySelector('i');
+    if (icon.classList.contains('far')) {
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+        heartElement.classList.add('favorited');
+
+        console.log('Agregado a favoritos');
+    } else {
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+        heartElement.classList.remove('favorited');
+
+        console.log('Removido de favoritos');
+    }
+}
+
+</script>
 
 </body>
 </html>

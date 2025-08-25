@@ -12,7 +12,7 @@ const header= `
 const footer = `<div class="footer-container">
         <div class="footer-section">
             <div class="logo">
-            <img src="" alt="logo">
+            <img src="./img/a.png" alt="Logo">
             </div>
             <p>Tu tienda de confianza</p>
                 <div class="social-icons">
