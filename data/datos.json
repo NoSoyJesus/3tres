@@ -1,0 +1,74 @@
+[ 
+  {
+        "id": "p1",
+        "category": "electronics",
+        "image": "./img/iPhone_16_Pro_Natural_Titanium_Hero_Vertical_Screen__WWEN_fe8bed66-68af-41a4-9cb8-8fdb1a6cb5c7.jpg",
+        "title": "Smartphone Pro Max",
+        "description": "El último modelo con cámara de 108MP, pantalla AMOLED y procesador de última generación.",
+        "price": 1000,
+        "stock": 99
+    },
+    {
+        "id": "p2",
+        "category": "computers",
+        "image": "./img/ge63-raider-20180110-1.png",
+        "title": "Laptop Gaming RGB",
+        "description": "Potente laptop para gaming con tarjeta gráfica dedicada, 16GB RAM y SSD de 1TB. Muy poco uso.",
+        "price": 1200,
+        "stock": 99
+    },
+    {
+        "id": "p3",
+        "category": "accessories",
+        "image": "./img/01.JBL_Tune 520BT_Product Image_Hero_Blue.png",
+        "title": "Auriculares Inalámbricos",
+        "description": "Auriculares con cancelación de ruido, batería de 30 horas y calidad de sonido premium. Nuevos.",
+        "price": 1300,
+        "stock": 99
+    },
+    {
+        "id": "p4",
+        "category": "electronics",
+        "image": "./img/1.5_6bde6e09-101c-4bfb-a188-465b35ee5f4f_1.jpg",
+        "title": "Smart Watch Elite",
+        "description": "Reloj inteligente con monitor de salud, GPS integrado y resistencia al agua. Muy poco uso.",
+        "price": 1400,
+        "stock": 99
+    },
+    {
+        "id": "p5",
+        "category": "computers",
+        "image": "./img/descargar.png",
+        "title": "Monitor 4K Ultra Wide",
+        "description": "Monitor curvo de 34 pulgadas, resolución 4K, ideal para trabajo y entretenimiento.",
+        "price": 1500,
+        "stock": 99
+    },
+    {
+        "id": "p6",
+        "category": "accessories",
+        "image": "./img/smk5900sb-2.png",
+        "title": "Teclado Mecánico RGB",
+        "description": "Teclado gaming mecánico con switches azules, retroiluminación RGB personalizable.",
+        "price": 1600,
+        "stock": 99
+    },
+    {
+        "id": "p7",
+        "category": "phones",
+        "image": "./img/Colorware-iPhone-7-Retro-2.png",
+        "title": "Teléfono Clásico Retro",
+        "description": "Teléfono con diseño vintage pero con funciones modernas, perfecto para oficina.",
+        "price": 1700,
+        "stock": 99
+    },
+    {
+        "id": "p8",
+        "category": "electronics",
+        "image": "./img/04-1-clp-featured-H13-1920-1280-png.png",
+        "title": "Cámara Digital Pro",
+        "description": "Cámara profesional con sensor de 45MP, grabación 4K y lentes intercambiables.",
+        "price": 1800,
+        "stock": 99
+    }
+  ]

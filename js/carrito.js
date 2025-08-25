@@ -3,28 +3,30 @@ if (localStorage.getItem("carrito") == undefined) {
 }
 
 function agregarCarrito(event) {
-    const articulo = event.target.parentNode.parentNode
-    let carrito = JSON.parse(localStorage.getItem("carrito"))
-    const nombre = articulo.querySelector(".product-title").innerHTML
-    const descripcion = articulo.querySelector(".product-description").innerHTML
-    const precio = articulo.querySelector(".product-price").innerHTML
+    const articulo = event.target.closest('.product-card');
+    let carrito = JSON.parse(localStorage.getItem("carrito"));
+    const nombre = articulo.querySelector(".product-title").innerHTML;
+    const descripcion = articulo.querySelector(".product-description").innerHTML;
+    const precio = articulo.querySelector(".product-price").innerHTML;
+    const cantidadInput = articulo.querySelector(".quantity-input");
+    const cantidad = cantidadInput ? parseInt(cantidadInput.value) : 1;
 
-    const existe = carrito.some(articulo => articulo.nombre === nombre)
+    const existe = carrito.some(articulo => articulo.nombre === nombre);
     if(existe) {
-        alert("El articulo ya se encuentra en el carrito!")
-        return
+        alert("El articulo ya se encuentra en el carrito!");
+        return;
     }
 
     let articuloCarrito = {
         nombre: nombre,
         descripcion: descripcion,
         precio: precio,
-        cantidad: 1
-    }
+        cantidad: cantidad
+    };
 
-    carrito.push(articuloCarrito)
+    carrito.push(articuloCarrito);
 
-    localStorage.setItem("carrito", JSON.stringify(carrito))
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 function quitarCarrito(event) {
@@ -40,61 +42,61 @@ function quitarCarrito(event) {
 }
 
 function modificarCantidad(event) {
-    let carrito = JSON.parse(localStorage.getItem("carrito"))
-    const articulo = event.target.parentNode.parentNode
-    const input = event.target
+    let carrito = JSON.parse(localStorage.getItem("carrito"));
+    const articulo = event.target.closest('.articulo');
+    const nombreArticulo = articulo.querySelector(".tituloArticulo").innerHTML;
+    const nuevaCantidad = parseInt(event.target.value);
 
     carrito.forEach((element) => {
-        if (element.nombre == articulo.querySelector(".tituloArticulo").innerHTML) {
-            element.cantidad = input.value
-            return
+        if (element.nombre == nombreArticulo) {
+            element.cantidad = nuevaCantidad;
         }
-    })
+    });
 
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    calcularTotal()
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    calcularTotal();
 }
 
 function cargarCarrito() {
-    const carritoDiv = document.querySelector("#articulosCarrito")
-    const carrito = JSON.parse(localStorage.getItem("carrito"))
+    const carritoDiv = document.querySelector("#articulosCarrito");
+    carritoDiv.innerHTML = ""; // Limpia antes de cargar
+    const carrito = JSON.parse(localStorage.getItem("carrito"));
 
     carrito.forEach((articulo) => {
-        const articuloContenedor = document.createElement("div")
-        const articuloContenido = document.createElement("div")
-        articuloContenedor.className = "articulo"
+        const articuloContenedor = document.createElement("div");
+        const articuloContenido = document.createElement("div");
+        articuloContenedor.className = "articulo";
 
-        const nombre = document.createElement("p")
-        nombre.innerHTML = articulo.nombre
-        nombre.className = "tituloArticulo"
+        const nombre = document.createElement("p");
+        nombre.innerHTML = articulo.nombre;
+        nombre.className = "tituloArticulo";
 
-        const descripcion = document.createElement("p")
-        descripcion.innerHTML = articulo.descripcion
-        descripcion.className = "descripcionArticulo"
+        const descripcion = document.createElement("p");
+        descripcion.innerHTML = articulo.descripcion;
+        descripcion.className = "descripcionArticulo";
 
-        const precio = document.createElement("p")
-        precio.innerHTML = articulo.precio
-        precio.className = "precioArticulo"
+        const precio = document.createElement("p");
+        precio.innerHTML = articulo.precio;
+        precio.className = "precioArticulo";
 
-        const cantidad = document.createElement("input")
-        cantidad.className = "cantidadArticulo"
-        cantidad.type = "number"
-        cantidad.min = 1
-        cantidad.value = articulo.cantidad
-        cantidad.setAttribute("input", "modificarCantidad(event)")
-        cantidad.setAttribute("onkeydown", "return false")
+        const cantidad = document.createElement("input");
+        cantidad.className = "cantidadArticulo";
+        cantidad.type = "number";
+        cantidad.min = 1;
+        cantidad.value = articulo.cantidad;
+        cantidad.oninput = modificarCantidad;
 
-        const eliminarArticulo = document.createElement("button")
-        eliminarArticulo.classList = "eliminarArticulo fa-solid fa-circle-xmark"
-        eliminarArticulo.setAttribute("onclick", "quitarCarrito(event)")
+        const eliminarArticulo = document.createElement("button");
+        eliminarArticulo.classList = "eliminarArticulo fa-solid fa-circle-xmark";
+        eliminarArticulo.setAttribute("onclick", "quitarCarrito(event)");
 
-        articuloContenido.append(nombre, descripcion, precio, cantidad, eliminarArticulo)
-        articuloContenedor.appendChild(articuloContenido)
+        articuloContenido.append(nombre, descripcion, precio, cantidad, eliminarArticulo);
+        articuloContenedor.appendChild(articuloContenido);
 
-        carritoDiv.appendChild(articuloContenedor)
-    })
+        carritoDiv.appendChild(articuloContenedor);
+    });
 
-    calcularTotal()
+    calcularTotal();
 }
 
 function calcularTotal() {
@@ -110,8 +112,20 @@ function calcularTotal() {
     document.querySelector("#totalCompra").innerHTML = total
 }
 
+function vaciarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify([]));
+    cargarCarrito();
+}
+
 window.onload = function cargarBotones() {
     document.querySelectorAll(".product-card")?.forEach((element) => {
         element.querySelector(".btn-primary").setAttribute("onclick", "agregarCarrito(event)")
     })
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const vaciarBtn = document.getElementById('vaciarCarritoBtn');
+    if (vaciarBtn) {
+        vaciarBtn.addEventListener('click', vaciarCarrito);
+    }
+});

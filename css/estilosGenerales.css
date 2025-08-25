@@ -8,6 +8,7 @@
 body{
     background-color: var(--color-secundario-);
     color: black;
+    overscroll-behavior: none;
 }
 
 
