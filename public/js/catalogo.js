@@ -1,21 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('./data/datos.json')
+    fetch('/productos')
         .then(response => response.json())
         .then(productos => {
             const grid = document.getElementById('productsGrid');
             grid.innerHTML = '';
             const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
             productos.forEach((product, idx) => {
-                const isFavorited = favorites.some(p => p.title === product.title);
+                const isFavorited = favorites.some(p => p.nombre === product.nombre);
                 grid.innerHTML += `
-                    <div class="product-card" data-category="${product.category}">
+                    <div class="product-card" data-category="${product.categoria || ''}">
                         <div class="heart-icon${isFavorited ? ' favorited' : ''}" onclick="toggleFavorite(this)">
                             <i class="${isFavorited ? 'fas' : 'far'} fa-heart"></i>
                         </div>
-                        <img src="${product.image}" alt="" class="product-image">
-                        <h3 class="product-title">${product.title}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-price">${product.price}</div>
+                        <h3 class="product-title">${product.nombre}</h3>
+                        <p class="product-description">${product.descripcion}</p>
+                        <div class="product-price">$${product.precio}</div>
                         <div class="product-actions">
                             <div class="quantity-controls">
                                 <label for="quantity-${idx}" class="quantity-label">Cant:</label>

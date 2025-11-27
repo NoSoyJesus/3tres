@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilosGenerales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <header>
+    </header>
+
+    <div class="formulario" id="formularioAgreg">
+        <h1>Agregue Un Nuevo Producto</h1>
+        <form action="">
+
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="descripcion" placeholder="Descripcion" required>
+            <input type="number" name="precio" placeholder="Precio" required>
+            <button id="agregarProd" onclick="">Agregar</button>
+        </form>
+    </div>
+
+    <main>
+        <section class="hero-section">
+            <button class="btn-primary" style="font-size: 3rem;" onclick="mostrarF()">Agregar Productos</button>
+        </section>
+
+        <!-- Filtros eliminados, ahora los productos se gestionan desde el backend -->
+
+        <section class="products-grid" id="productsGrid">
+
+        </section>
+    </main>
+
+    <div class="formulario" id="formularioEdit">
+        <h1>Edite el Producto</h1>
+        <form action="">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="descripcion" placeholder="Descripcion" required>
+            <input type="number" name="precio" placeholder="Precio" required>
+            <button id="agregarProd" onclick="">Confirmar</button>
+        </form>
+    </div>
+
+    <a href="./carrito.html">
+        <div class="cart-icon">
+        
+        </div>
+    </a>
+
+
+<footer class="site-footer"></footer>
+<script src="./js/auth.js"></script>
+<script src="./js/modulos.js"></script>
+<script src="./js/mostrarForm.js"></script>
+<script src="./js/showEditProduct.js"></script>
+<script src="./js/adminPanel.js"></script>
+</body>
+</html>

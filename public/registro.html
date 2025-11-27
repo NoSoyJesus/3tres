@@ -20,10 +20,10 @@
                     Bienvenido,<span>cree una cuenta para continuar </span>
                 </p>
 
-                <input type="text" placeholder="Full Name" name="Full Name">
+                <input type="text" placeholder="Full Name" name="nombre">
                 <input type="email" placeholder="Email" name="email">
                 <input type="password" placeholder="Password" name="password">
-                <input type="password" placeholder="Confirm password" name="password">
+                <input type="password" placeholder="Confirm password" name="confirm">
                 <button class="oauthButton">
                     Continue
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"></path><path d="m13 17 5-5-5-5"></path></svg>
@@ -32,6 +32,32 @@
         </section>
     </main>
     <footer></footer>
+<script src="js/auth.js"></script>
 <script src="js/modulos.js"></script>
+<script>
+document.querySelector('.form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const nombre = form.elements['nombre'].value.trim();
+    const email = form.elements['email'].value.trim();
+    const password = form.elements['password'].value;
+    const confirm = form.elements['confirm'].value;
+    if (!nombre || !email || !password) {
+        alert('Complete todos los campos');
+        return;
+    }
+    if (password !== confirm) {
+        alert('Las contraseñas no coinciden');
+        return;
+    }
+    try {
+        await register(nombre, email, password);
+        alert('Registro exitoso, ahora inicia sesión');
+        window.location.href = 'login.html';
+    } catch (err) {
+        alert('Registro fallido: ' + err.message);
+    }
+});
+</script>
 </body>
 </html>

@@ -15,10 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="heart-icon favorited" onclick="toggleFavorite(this)">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <img src="${product.image}" alt="" class="product-image">
-                        <h3 class="product-title">${product.title}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-price">${product.price}</div>
+                        <h3 class="product-title">${product.nombre}</h3>
+                        <p class="product-description">${product.descripcion}</p>
+                        <div class="product-price">${product.precio}</div>
                         <div class="product-actions">
                             <button class="btn-primary" onclick="agregarCarrito(event)">
                                 <i class="fas fa-shopping-cart"></i> Agregar

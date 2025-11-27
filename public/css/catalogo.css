@@ -60,10 +60,7 @@ header ul li a:hover {
 }
 
 main {
-  max-width: 1480px;
-  margin: 0 auto;
   padding: 0.5rem 1rem;
-  box-sizing: border-box;
 }
 
 .hero-section {
