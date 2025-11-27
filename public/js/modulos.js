@@ -1,4 +1,3 @@
-// Render footer and default header when auth.js is not present
 const defaultHeader = `
     <a href="./index.html">
         <div style="margin-left: 80px;">
@@ -43,7 +42,6 @@ const footer = `
         <p>&copy; 2025 3tres. Todos los derechos reservados.</p>
     </div>`;
 
-// If auth.js provided renderUserNav it will update header; otherwise set default header
 if (typeof renderUserNav !== 'function') {
     const headerEl = document.querySelector('header');
     if (headerEl) headerEl.innerHTML = defaultHeader;

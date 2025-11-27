@@ -1,9 +1,5 @@
-// auth.js: Maneja login, registro y sesión
-
-// URL base del backend (ruta definida en el servidor: /users)
 const API_URL = '/users';
 
-// Login
 async function login(email, password) {
     const res = await fetch(`${API_URL}/iniciarSesion`, {
         method: 'POST',
@@ -18,7 +14,6 @@ async function login(email, password) {
     return data;
 }
 
-// Registro
 async function register(nombre, email, password) {
     const res = await fetch(`${API_URL}/register`, {
         method: 'POST',
@@ -29,7 +24,6 @@ async function register(nombre, email, password) {
     return await res.json();
 }
 
-// Cerrar sesión
 function logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('nombre');
@@ -37,12 +31,10 @@ function logout() {
     window.location.href = 'login.html';
 }
 
-// Saber si está logueado
 function isLoggedIn() {
     return !!localStorage.getItem('token');
 }
 
-// Obtener nombre y rol
 function getNombre() {
     return localStorage.getItem('nombre');
 }
@@ -51,7 +43,6 @@ function getRol() {
     return rolStr ? parseInt(rolStr) : null;
 }
 
-// Renderizar saludo y logout en el nav
 function renderUserNav() {
     const header = document.querySelector('header');
     if (!header) return;

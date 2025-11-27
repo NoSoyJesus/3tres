@@ -8,7 +8,6 @@ const pool = mysql.createPool({
     connectionLimit: 5
   });
 
-  // test connection
   pool.getConnection()
   .then(connection => {
     console.log('Conexion exitosa a la DB')

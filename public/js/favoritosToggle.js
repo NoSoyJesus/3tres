@@ -20,13 +20,11 @@ function toggleFavorite(heartElement) {
                 favorites.push(product);
                 localStorage.setItem('favorites', JSON.stringify(favorites));
             }
-        console.log('Agregado a favoritos');
     } else {
         icon.classList.remove('fas');
         icon.classList.add('far');
         heartElement.classList.remove('favorited');
             favorites = favorites.filter(p => p.nombre !== product.nombre);
         localStorage.setItem('favorites', JSON.stringify(favorites));
-        console.log('Removido de favoritos');
     }
 }

@@ -32,7 +32,6 @@ body {
 }
 
 
-/* Responsive para tablets */
 @media (max-width: 768px) {
   .products {
     padding: 1rem;

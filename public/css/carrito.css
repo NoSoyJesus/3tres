@@ -76,8 +76,6 @@
   background-color: #7aa99d;
 }
 
-/* Responsive */
-
 @media (max-width: 768px) {
   #carrito {
     flex-direction: column;

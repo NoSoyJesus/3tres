@@ -1,8 +1,5 @@
-// adminPanel.js: Maneja la gestión de productos desde el backend para admin.html
-
 const API_PRODUCTS = '/productos';
 
-// Verificar que el usuario sea admin antes de permitir acceso
 async function verificarAdmin() {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -18,10 +15,8 @@ async function verificarAdmin() {
         });
 
         if (res.status === 201) {
-            // Usuario es admin (rol = 1)
             return true;
         } else {
-            // Usuario no es admin
             alert('No tienes permisos para acceder al panel de admin');
             window.location.href = 'index.html';
             return false;
@@ -33,7 +28,6 @@ async function verificarAdmin() {
     }
 }
 
-// Cargar productos al iniciar
 async function cargarProductosAdmin() {
     const grid = document.getElementById('productsGrid');
     grid.innerHTML = '';
@@ -62,7 +56,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// Agregar producto
 async function agregarProducto(e) {
     e.preventDefault();
     const form = e.target;
@@ -86,7 +79,6 @@ async function agregarProducto(e) {
 
 document.querySelector('#formularioAgreg form').onsubmit = agregarProducto;
 
-// Eliminar producto
 async function eliminarProducto(id) {
     if (!confirm('¿Eliminar producto?')) return;
     const token = localStorage.getItem('token');
@@ -98,9 +90,7 @@ async function eliminarProducto(id) {
     cargarProductosAdmin();
 }
 
-// Editar producto (mostrar formulario)
 function editarProducto(id) {
-    // Cargar datos y mostrar formulario de edición
     const card = document.querySelector(`.product-card[data-id='${id}']`);
     const form = document.querySelector('#formularioEdit form');
     form[0].value = card.querySelector('.product-title').textContent;
@@ -110,7 +100,6 @@ function editarProducto(id) {
     document.getElementById('formularioEdit').style.display = 'block';
 }
 
-// Confirmar edición
 async function confirmarEdicion(e) {
     e.preventDefault();
     const form = e.target;
